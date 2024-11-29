@@ -9,7 +9,7 @@ for i in range(len(njobs_list)):
     a1 = Parallel(n_jobs=njobs_list[i])(delayed(factorial)(i) for i in range(3,10))
     end = time.time()
     time_taken = end - start
-    print(f"czas trwania obliczen dla njobs = {njobs_list[i]}: {time_taken:.3f}s")
+    print(f"The duration of calculations for n_jobs = {njobs_list[i]}: {time_taken:.3f}s")
 
 
 

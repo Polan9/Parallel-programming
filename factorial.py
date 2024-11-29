@@ -1,4 +1,3 @@
-
 def factorial(n):
     list_of_numbers = [i for i in range(n + 1)]
     result = []
