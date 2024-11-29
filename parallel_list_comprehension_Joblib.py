@@ -1,17 +1,13 @@
-from factorial import factorial
-from joblib import delayed, Parallel
+from list_comprehension_sqrt import list_sqrt
 import time
+from joblib import delayed, Parallel
 
 njobs_list = [2,5,10,15,25]
-
 for i in range(len(njobs_list)):
     start = time.time()
-    a1 = Parallel(n_jobs=njobs_list[i])(delayed(factorial)(i) for i in range(3,10))
+    a1 = Parallel(n_jobs=njobs_list[i])(delayed(list_sqrt)(0,200) for _ in range(njobs_list[i]))
     end = time.time()
     time_taken = end - start
     print(f"czas trwania obliczen dla njobs = {njobs_list[i]}: {time_taken:.3f}s")
 
 
-
-test = factorial(5)
-print(test)
