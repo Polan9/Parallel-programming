@@ -1,3 +1,7 @@
+from joblib import Parallel, delayed
+import time
+from list_comprehension_sqrt import list_sqrt
+
 def factorial(n):
     list_of_numbers = [i for i in range(n + 1)]
     result = []
